@@ -115,7 +115,7 @@ const start = () => {
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "flex";
       display.classList.remove("inactive");
-      document.getElementById("countdown").style.display = "none";  // problem 3: কাউন্ট ডাউন জিরো তে আটকে যাওয়ার সলুশন এই লাইন। ডিস্প্লে নান করে দিয়েছি।
+      // document.getElementById("countdown").style.display = "none";  // problem 3: কাউন্ট ডাউন জিরো তে আটকে যাওয়ার সলুশন এই লাইন। ডিস্প্লে নান করে দিয়েছি।
       clearInterval(startCountdown);
       startTime = new Date().getTime();
     }
@@ -135,5 +135,5 @@ setInterval(() => {
   const timeSpent = (currentTime - startTime) / 1000;
 
   // problem 6 :  সেকেন্ড কাউন্টারের ডেসিমেল গায়েব করার জন্যে Template String এর ভেতরের timeSpent কে parsInt করেছি
-  document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`; //parseInt(timeSpent)
 }, 1000);

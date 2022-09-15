@@ -66,8 +66,8 @@ body {
 
 #result {
   position: fixed;
-  top: 50%;
-  left: 49%;
+  /* top: 50%;
+  left: 49%; */
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
@@ -205,7 +205,7 @@ button {
     width: 100%;
   }
 
-  #histories {
+  #historie {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-gap: 10px;
