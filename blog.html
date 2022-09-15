@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="fav.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("./bg.png");
+            background-size: cover;
+            background-position: left top;
+            font-family: "Zilla Slab", serif;
+        }
+    </style>
+    <title>Blog Page</title>
+</head>
+
+<body>
+    <header>
+        <!-- navbar -->
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-secondary ">
+                <div class="container-fluid">
+                    <a class="navbar-brand  text-light" href="index.html">Home Page</a>
+                    <h1 class="text-light">This is Blog Page</h1>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h3 class=" bg-light border mt-5 text-center">This is an Educational Section of Assginment 7 from Batch 6</h3>
+        <div>
+            <div class="accordion accordion-flush border rounded-4" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed bg-warning rounded-4" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                            aria-controls="flush-collapseOne">
+                            What is the difference between local storage and session storage?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-5"><b>What is Session Storage?</b> <br>
+
+                            Session Storage objects can be accessed using the sessionStorage read-only property. The
+                            difference between sessionStorage and localStorage is that localStorage data does not
+                            expire, whereas sessionStorage data is cleared when the page session ends. <br>
+
+                            A unique page session gets created once a document is loaded in a browser tab. Page sessions
+                            are valid for only one tab at a time. Pages are only saved for the amount of time that the
+                            tab or the browser is open; they do not persist after the page reloads and restores. A new
+                            session is created each time a tab or window is opened; this is different from session
+                            cookies. Each tab/window that is opened with the same URL creates its own
+                            sessionStorage.When you duplicate a tab, the sessionStorage from the original tab is copied
+                            to the duplicated tab. Closing a window/tab ends the session and clears sessionStorage
+                            objects. <br>
+
+                            A page’s protocol determines what data is stored in sessionStorage. Particularly, data
+                            stored by scripts accessed through HTTP (for example, http://abc.com) <br> is stored in a
+                            separate object from the same site accessed through HTTPS (for instance, https://abc.com).
+                            <br> A
+                            DOMString number is two bytes per character in UTF-16 DOMString format. Strings are
+                            automatically generated from integer keys just as they are for objects. <br>
+
+                            Session Storage has 4 methods: <br>
+
+                            setItem() Method – This method takes two parameters one is key and another one is value. It
+                            is used to store the value in a particular location with the name of the key. <br>
+                            sessionStorage.setItem(key, value) <br>
+                            getIteam() Method – This method takes one parameter that is key which is used to get the
+                            value stored with a particular key name.<br>
+                            sessionStorage.getItem(key) <br>
+                            removeItem() Method – This is method is used to remove the value stored in the memory in
+                            reference to key. <br>
+                            sessionStorage.removeItem(key)
+                            clear() Method – This method is used to clear all the values stored in the session storage
+                            sessionStorage.clear() <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed bg-warning rounded-4" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                            aria-controls="flush-collapseTwo">
+                            What is the difference between global scope and block scope ?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-5">a scope is where you can refer to a variable. a block defines a
+                            block scope a variable defined inside a block will be defined only inside that block and you
+                            can't reference it after the end of block. <br>
+
+                            so in this code if you try something like: <br>
+
+                            <code>
+                            x = 10;
+                            if(x ==10) { // start new scope
+                            int y = 20; // known only to this block
+                            x = y * 2;
+                            }
+
+                            y = 5; // error y is out of scope, not it is not defined
+                         </code>
+                            <br>
+                            because what you have here is a local scope <br>
+                            other kinds of scope in java are class scope (for example), a member of a class has a class
+                            scope so it is accessible anywhere inside a class. <br>
+
+                            the basic rules for scope are: <br>
+
+                            The scope of a parameter declaration is the body of the method in which the declaration
+                            appears. <br>
+                            The scope of a local-variable declaration is from the point at which the declaration appears
+                            to the end of that block. <br>
+                            The scope of a local-variable declaration that appears in the initialization section of a
+                            for statement’s header is the body of the for statement and the other expressions in the
+                            header. <br>
+                            A method or field’s scope is the entire body of the class. This enables non-static methods
+                            of a class to use the fields and other methods of the class. <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed bg-warning rounded-4" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            How does JavaScript event loop works ?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-5">
+                            <b>I am thinking about it and this is what I came up with:</b> <br>
+
+                            Let's see this code below: <br>
+
+                            <code>  console.clear();
+                            console.log("a");
+                            setTimeout(function(){console.log("b");},1000);
+                            console.log("c");
+                            setTimeout(function(){console.log("d");},0);</code>
+                            A request comes in, and JS engine starts executing the code above step by step. The first
+                            two calls are sync calls. But when it comes to setTimeout method, it becomes an async
+                            execution. But JS immediately returns from it and continue executing, which is called
+                            Non-Blocking or Async. And it continues working on other etc. <br>
+
+                            The results of this execution is the following: <br>
+
+                            <b>a c d b</b> <br>
+
+                            So basically the second setTimeout got finished first and its callback function gets
+                            executed earlier than the first one and that makes sense. <br>
+
+                            We are talking about single-threaded application here. JS Engine keeps executing this and
+                            unless it finishes the first request, it won't go to second one. But the good thing is that
+                            it won't wait for blocking operations like setTimeout to resolve so it will be faster
+                            because it accepts the new incoming requests. <br>
+
+                            But my questions arise around the following items: <br>
+
+                            #1: If we are talking about a single-threaded application, then what mechanism processes
+                            setTimeouts while the JS engine accepts more requests and executes them? How does the single
+                            thread continue working on other requests? What works on setTimeout while other requests
+                            keep coming in and get executed. <br>
+
+                            #2: If these setTimeout functions get executed behind the scenes while more requests are
+                            coming in and being executed, what carries out the async executions behind the scenes? What
+                            is this thing that we talk about called the EventLoop? <br>
+
+                            #3: But shouldn't the whole method be put in the EventLoop so that the whole thing gets
+                            executed and the callback method gets called? This is what I understand when talking about
+                            callback functions: <br>
+
+                            <code>function downloadFile(filePath, callback)
+                                {
+                                blah.downloadFile(filePath);
+                                callback();
+                                }
+                            </code> <br>
+                            But in this case, how does the JS Engine know if it is an async function so that it can put
+                            the callback in the EventLoop? Perhaps something like the async keyword in C# or some sort
+                            of an attribute which indicates the method JS Engine will take on is an async method and
+                            should be treated accordingly.
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed bg-warning rounded-4" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                            How Many Ways to get Undefined?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-5"><b>8 ways to get Undefined</b><br>
+                            1. variable that is not initialized will give undefinedbr <br>
+                            2. function with no return will give you undefined <br>
+                            3. Parameter that is not passed will be unfefined <br>
+                            4. if return has nothing on the right side will return undefined <br>
+                            5. property that doesn't exist an object that will give you undefined <br>
+                            6. accessing array elements outside of the index range will give you undefined <br>
+                            7. deleting an element inside an array <br>
+                            8. set a value directly to undefined </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
