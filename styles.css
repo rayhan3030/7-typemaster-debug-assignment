@@ -66,8 +66,8 @@ body {
 
 #result {
   position: fixed;
-  /* top: 50%;
-  left: 49%; */
+  top: 50%;
+  left: 49%;
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
