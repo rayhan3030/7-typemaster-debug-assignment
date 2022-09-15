@@ -205,7 +205,7 @@ button {
     width: 100%;
   }
 
-  #historie {
+  #histories {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-gap: 10px;
