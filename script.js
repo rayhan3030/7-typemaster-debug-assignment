@@ -1,6 +1,6 @@
 const display = document.getElementById("display");
 const question = document.getElementById("question");
-const startBtn = document.getElementById("start");  // Problem 1: এখানে starts এর জায়গাতে start লেখা ছিল। ঠিক করেছি
+const startBtn = document.getElementById("starts");  // Problem 1: এখানে starts এর জায়গাতে start লেখা ছিল। ঠিক করেছি
 const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
@@ -107,7 +107,7 @@ const start = () => {
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = `<h1>${count}</h1>`;   // problem 2: ${count} দেখাতো কাউন্টার শুরু না হয়ে। কারন এখানে ক্যারেট বা ব্যাকটিক দেয়া ছিল না। 
+    countdownOverlay.innerHTML = '<h1>${count}</h1>';   // problem 2: ${count} দেখাতো কাউন্টার শুরু না হয়ে। কারন এখানে ক্যারেট বা ব্যাকটিক দেয়া ছিল না। 
 
     // finished timer
     if (count == 0) {
