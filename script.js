@@ -115,7 +115,7 @@ const start = () => {
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "flex";
       display.classList.remove("inactive");
-      // document.getElementById("countdown").style.display = "none";  // problem 3: কাউন্ট ডাউন জিরো তে আটকে যাওয়ার সলুশন এই লাইন। ডিস্প্লে নান করে দিয়েছি।
+      document.getElementById("countdown").style.display = "none";  // problem 3: কাউন্ট ডাউন জিরো তে আটকে যাওয়ার সলুশন এই লাইন। ডিস্প্লে নান করে দিয়েছি।
       clearInterval(startCountdown);
       startTime = new Date().getTime();
     }
