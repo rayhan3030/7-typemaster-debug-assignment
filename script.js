@@ -135,5 +135,5 @@ setInterval(() => {
   const timeSpent = (currentTime - startTime) / 1000;
 
   // problem 6 :  সেকেন্ড কাউন্টারের ডেসিমেল গায়েব করার জন্যে Template String এর ভেতরের timeSpent কে parsInt করেছি
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`; //parseInt(timeSpent)
+  document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`; //
 }, 1000);
