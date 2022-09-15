@@ -107,7 +107,7 @@ const start = () => {
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = '<h1>${count}</h1>';   // problem 2: ${count} দেখাতো কাউন্টার শুরু না হয়ে। কারন এখানে ক্যারেট বা ব্যাকটিক দেয়া ছিল না। 
+    countdownOverlay.innerHTML = `<h1>${count}</h1>`;   // problem 2: ${count} দেখাতো কাউন্টার শুরু না হয়ে। কারন এখানে ক্যারেট বা ব্যাকটিক দেয়া ছিল না। 
 
     // finished timer
     if (count == 0) {
