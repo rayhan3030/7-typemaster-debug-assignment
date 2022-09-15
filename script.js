@@ -1,6 +1,6 @@
 const display = document.getElementById("display");
 const question = document.getElementById("question");
-const startBtn = document.getElementById("starts");
+const startBtn = document.getElementById("start");  // Problem 1: এখানে starts এর জায়গাতে start লেখা ছিল। ঠিক করেছি
 const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
@@ -79,10 +79,10 @@ const gameOver = () => {
   display.classList.add("inactive");
   // show result
   resultModal.innerHTML += `
-    <h1>Finished!</h1>
+   <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
-    <button onclick="closeModal()">Close</button>
+    <button onclick="closeModal()">Close</button>  
   `;
 
   addHistory(questionText, timeTaken, errorCount);
@@ -107,7 +107,7 @@ const start = () => {
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = `<h1>${count}</h1>`;
+    countdownOverlay.innerHTML = `<h1>${count}</h1>`;   // problem 2: ${count} দেখাতো কাউন্টার শুরু না হয়ে। কারন এখানে ক্যারেট বা ব্যাকটিক দেয়া ছিল না। 
 
     // finished timer
     if (count == 0) {
@@ -115,7 +115,7 @@ const start = () => {
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "flex";
       display.classList.remove("inactive");
-
+      document.getElementById("countdown").style.display = "none";  // problem 3: কাউন্ট ডাউন জিরো তে আটকে যাওয়ার সলুশন এই লাইন। ডিস্প্লে নান করে দিয়েছি।
       clearInterval(startCountdown);
       startTime = new Date().getTime();
     }
@@ -124,7 +124,7 @@ const start = () => {
 };
 
 // START Countdown
-startBtn.addEventListener("click", start)
+startBtn.addEventListener("click", start);
 
 // If history exists, show it
 displayHistory();
@@ -134,6 +134,6 @@ setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
 
-
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+  // problem 6 :  সেকেন্ড কাউন্টারের ডেসিমেল গায়েব করার জন্যে Template String এর ভেতরের timeSpent কে parsInt করেছি
+  document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`;
 }, 1000);

@@ -25,11 +25,9 @@ body {
   font-size: 25px;
   border-radius: 15px;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    92.49deg,
-    rgba(255, 255, 255, 0.1) 0.18%,
-    rgba(255, 255, 255, 0.05) 99.85%
-  );
+  background: linear-gradient(92.49deg,
+      rgba(255, 255, 255, 0.1) 0.18%,
+      rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
 }
@@ -61,10 +59,15 @@ body {
   color: white;
   display: none;
 }
+
+/*
+ problem  4 : Modal কে স্ক্রিনের মাঝা মাঝি আনার জন্যে এই মডাল এর  result আইডি তে top: 50% ও left: 49% লিখে দিয়েছি  
+*/
+
 #result {
   position: fixed;
-  top: 10%; 
-  left: 10%;
+  top: 50%;
+  left: 49%;
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
@@ -75,7 +78,8 @@ body {
   text-align: center;
   padding: 2rem;
 }
-#show-time{
+
+#show-time {
   text-align: center;
   color: white;
   margin: 10px 0;
@@ -84,18 +88,23 @@ body {
 .green {
   color: #9dffad;
 }
+
 .red {
   color: #eb6565;
 }
+
 .bold {
   font-weight: 700;
 }
+
 .inactive {
   border: 2px solid white !important;
 }
+
 .hidden {
   display: none;
 }
+
 .title {
   text-align: center;
   color: white;
@@ -127,6 +136,7 @@ body {
   justify-content: center;
   margin: 30px 0;
 }
+
 button {
   padding: 10px 20px;
   border: none;
@@ -141,13 +151,19 @@ button {
   cursor: pointer;
 }
 
-#histories {
+#historie {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
 }
 
 .card {
+  /* float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; */
+
   width: 100%;
   height: 100%;
   padding: 50px;
@@ -155,37 +171,58 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
-  color: white;
+  color: rgb(255, 255, 255);
   border-radius: 15px;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    92.49deg,
-    rgba(255, 255, 255, 0.1) 0.18%,
-    rgba(255, 255, 255, 0.05) 99.85%
-  );
+  background: linear-gradient(92.49deg,
+      rgba(255, 255, 255, 0.1) 0.18%,
+      rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
 }
 
 #modal-background {
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    92.49deg,
-    rgba(255, 255, 255, 0.1) 0.18%,
-    rgba(255, 255, 255, 0.05) 99.85%
-  );
+  background: linear-gradient(92.49deg,
+      rgba(255, 255, 255, 0.1) 0.18%,
+      rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
+  /* padding-left: 500px; */
+  /* height: 100vh;
+  width: 100%; */
+  /* position: fixed; */
+  /* top: 0; */
+
+  top: 50%;
+  left: 50%;
 }
 
-@media only screen and (max-width: 700px) {
+/* problem 5:  মিডিয়াম ডিভাইসে তিনটা কলাম এ দেখানোর জন্যে এখানে কাস্টম brekpoint বসিয়েছি ও তাতে ডিভ গুলোর প্যারেন্ট
+ডিভ হিস্টোরিস এ গ্রিড টেমপ্লেট কলাম সিস্টেম এপ্লাই করেছি। বাকি যা আছে আগের মতই */
+@media only screen and (min-width: 700px) {
   .box-container {
     padding: 0 20px;
     width: 100%;
   }
+
+  #histories {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .box-container {
+    padding: 0 20px;
+    width: 100%;
+  }
+
   .card {
     flex-direction: column;
   }
